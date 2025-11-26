@@ -6,7 +6,9 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_setcpr = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
 
         const gs = Blockly.Arduino.valueToCode(block, 'GS', Blockly.Arduino.ORDER_ATOMIC);
         const ppr = Blockly.Arduino.valueToCode(block, 'PPR', Blockly.Arduino.ORDER_ATOMIC);
@@ -14,7 +16,9 @@ function registerGenerators (Blockly) {
     };
     Blockly.Arduino.tubitv2mtc_setpid = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         
         const p = Blockly.Arduino.valueToCode(block, 'P', Blockly.Arduino.ORDER_ATOMIC);
         const i = Blockly.Arduino.valueToCode(block, 'I', Blockly.Arduino.ORDER_ATOMIC);
@@ -24,7 +28,9 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_rundeg = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const deg = Blockly.Arduino.valueToCode(block, 'DEG', Blockly.Arduino.ORDER_ATOMIC);
         const speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
         return `mtc.angleToXY(${deg},${speed});\n`;
@@ -32,7 +38,9 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_runxyr = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
         const r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_ATOMIC);
@@ -40,7 +48,9 @@ function registerGenerators (Blockly) {
     };
     Blockly.Arduino.tubitv2mtc_runxyrv7rc = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
         const LR = Blockly.Arduino.valueToCode(block, 'LR', Blockly.Arduino.ORDER_ATOMIC);
@@ -49,7 +59,9 @@ function registerGenerators (Blockly) {
     };
     Blockly.Arduino.tubitv2mtc_setxyrdata = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const  wh= Blockly.Arduino.valueToCode(block, 'WH', Blockly.Arduino.ORDER_ATOMIC);
         const ww = Blockly.Arduino.valueToCode(block, 'WW', Blockly.Arduino.ORDER_ATOMIC);
         const mh = Blockly.Arduino.valueToCode(block, 'MH', Blockly.Arduino.ORDER_ATOMIC);
@@ -58,7 +70,9 @@ function registerGenerators (Blockly) {
     };
     Blockly.Arduino.tubitv2mtc_addxyrdata = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'MX', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'MY', Blockly.Arduino.ORDER_ATOMIC);
         const r = Blockly.Arduino.valueToCode(block, 'MZ', Blockly.Arduino.ORDER_ATOMIC);
@@ -67,7 +81,9 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_amove = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
         const r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_ATOMIC);
@@ -78,7 +94,9 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_move = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
         const r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_ATOMIC);
@@ -92,7 +110,9 @@ function registerGenerators (Blockly) {
 
         Blockly.Arduino.tubitv2mtc_amovecurve = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
         const r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_ATOMIC);
@@ -104,7 +124,9 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_movecurve = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
         const r = Blockly.Arduino.valueToCode(block, 'R', Blockly.Arduino.ORDER_ATOMIC);
@@ -119,21 +141,27 @@ function registerGenerators (Blockly) {
  
     Blockly.Arduino.tubitv2mtc_setbodydeg = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const vn = Blockly.Arduino.valueToCode(block, 'DEG', Blockly.Arduino.ORDER_ATOMIC) || '0';
         return `mtc.moveBody(0, 0, 0, true,fmod(360.0 - ${vn}, 360.0));\n`;
     };
 
     Blockly.Arduino.tubitv2mtc_interrset = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const vn = Blockly.Arduino.valueToCode(block, 'INTTNAME', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1);
         return `mtc.setInterruptCallback(&${vn});\n`;
     };
 
     Blockly.Arduino.tubitv2mtc_interrevent = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const vn = Blockly.Arduino.valueToCode(block, 'INTTNAME', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1);
         var branch = Blockly.Arduino.statementToCode(block, 'SUBSTACK');
 
@@ -147,21 +175,27 @@ function registerGenerators (Blockly) {
 
     Blockly.Arduino.tubitv2mtc_return = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const boolCode = Blockly.Arduino.valueToCode(block, 'B', Blockly.Arduino.ORDER_ATOMIC);
         return `return ${boolCode};\n`;
     };
 
     Blockly.Arduino.tubitv2mtc_interr = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const type = block.getFieldValue('TYPE');
         return [`mtc.${type}`, Blockly.Arduino.ORDER_ATOMIC];
     };
 
     Blockly.Arduino.tubitv2mtc_bnomove = function (block) {
         Blockly.Arduino.includes_.tubitv2mtc = `#include <TuMTC.h>`;
-        Blockly.Arduino.definitions_.tubitv2_set += `\nTuMTC mtc(tubit);`;
+        if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuMTC mtc(tubit);')) {
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuMTC mtc(tubit);\n';
+}
         const type = block.getFieldValue('TYPE');
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
