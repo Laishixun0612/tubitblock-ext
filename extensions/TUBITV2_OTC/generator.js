@@ -7,7 +7,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_setcpr = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
 
         const gs = Blockly.Arduino.valueToCode(block, 'GS', Blockly.Arduino.ORDER_ATOMIC);
@@ -17,7 +17,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_setpid = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         
         const p = Blockly.Arduino.valueToCode(block, 'P', Blockly.Arduino.ORDER_ATOMIC);
@@ -29,7 +29,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_rundeg = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const deg = Blockly.Arduino.valueToCode(block, 'DEG', Blockly.Arduino.ORDER_ATOMIC);
         const speed = Blockly.Arduino.valueToCode(block, 'SPEED', Blockly.Arduino.ORDER_ATOMIC);
@@ -39,7 +39,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_runxyr = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
@@ -49,7 +49,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_runxyrv7rc = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
@@ -60,7 +60,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_setxyrdata = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const  wh= Blockly.Arduino.valueToCode(block, 'WH', Blockly.Arduino.ORDER_ATOMIC);
         const ww = Blockly.Arduino.valueToCode(block, 'WW', Blockly.Arduino.ORDER_ATOMIC);
@@ -70,7 +70,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_addxyrdata = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'MX', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'MY', Blockly.Arduino.ORDER_ATOMIC);
@@ -81,7 +81,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_amove = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
@@ -94,7 +94,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_move = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
@@ -110,7 +110,7 @@ function registerGenerators (Blockly) {
         Blockly.Arduino.tubitv2otc_amovecurve = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
@@ -124,7 +124,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_movecurve = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);
         const y = Blockly.Arduino.valueToCode(block, 'Y', Blockly.Arduino.ORDER_ATOMIC);
@@ -141,7 +141,7 @@ function registerGenerators (Blockly) {
         Blockly.Arduino.tubitv2otc_setbodydeg = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const vn = Blockly.Arduino.valueToCode(block, 'DEG', Blockly.Arduino.ORDER_ATOMIC);
         return `otc.moveBody(0, 0, 0, true, fmod(360.0 - ${vn}, 360.0));\n`;
@@ -151,7 +151,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_interrset = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const vn = Blockly.Arduino.valueToCode(block, 'INTTNAME', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1);
         let code = `otc.setInterruptCallback(&${vn});\n`;
@@ -161,7 +161,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_interrevent = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const vn = Blockly.Arduino.valueToCode(block, 'INTTNAME', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1);
         var branch = Blockly.Arduino.statementToCode(block, 'SUBSTACK');
@@ -177,7 +177,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_return = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const boolCode = Blockly.Arduino.valueToCode(block, 'B', Blockly.Arduino.ORDER_ATOMIC);
         return `return ${boolCode};\n`;
@@ -186,7 +186,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_interr = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const type = block.getFieldValue('TYPE');
         return [`otc.${type}`, Blockly.Arduino.ORDER_ATOMIC];
@@ -195,7 +195,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2otc_bnomove = function (block) {
         Blockly.Arduino.includes_.tubitv2otc = `#include <TuOTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuOTC otc(tubit);')) { 
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);\n'; 
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuOTC otc(tubit);'; 
 }
         const type = block.getFieldValue('TYPE');
         const x = Blockly.Arduino.valueToCode(block, 'X', Blockly.Arduino.ORDER_ATOMIC);

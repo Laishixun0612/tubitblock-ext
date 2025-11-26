@@ -7,7 +7,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_setcpr = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
 
@@ -18,7 +18,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_setpid = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         
@@ -31,7 +31,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_setmotors= function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const leftMotor = block.getFieldValue('LEFT_MOTOR');
@@ -45,7 +45,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_setyrdata = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const  wh= Blockly.Arduino.valueToCode(block, 'WH', Blockly.Arduino.ORDER_ATOMIC);
@@ -56,7 +56,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_addyrdata = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const y = Blockly.Arduino.valueToCode(block, 'MY', Blockly.Arduino.ORDER_ATOMIC);
@@ -67,7 +67,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_initir = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const l2 = block.getFieldValue('PINL2');
@@ -81,7 +81,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_setirerr = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const l2 = Blockly.Arduino.valueToCode(block, 'L2', Blockly.Arduino.ORDER_ATOMIC);
@@ -95,7 +95,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_readir = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         
@@ -106,7 +106,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_readirerr = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         
@@ -116,7 +116,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_driveVector = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const mode = block.getFieldValue('CONTROL');
@@ -128,7 +128,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_rlwheel = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const w = block.getFieldValue('CONTROL');
@@ -139,7 +139,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_lineflowinit = function (block) {
     Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
     if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
 
@@ -163,7 +163,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_syncmotor= function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         return `tubit.syncPidReference(true);\n`;
@@ -172,7 +172,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_lineflowup = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         return `dtc.LineFollow_Update();\n`;
@@ -181,7 +181,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_lineflowstop = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         return `dtc.LineFollow_Stop();\n`;
@@ -190,7 +190,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_lineflowisruning = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         return [`dtc.LineFollow_Running()`, Blockly.Arduino.ORDER_ATOMIC];
@@ -199,7 +199,7 @@ function registerGenerators (Blockly) {
     Blockly.Arduino.tubitv2dtc_lineflowreaddis = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         return [`dtc.LineFollow_Distance()`, Blockly.Arduino.ORDER_ATOMIC];
@@ -209,7 +209,7 @@ function registerGenerators (Blockly) {
 Blockly.Arduino.tubitv2dtc_move = function (block) {
     Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
     if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
 
@@ -229,7 +229,7 @@ Blockly.Arduino.tubitv2dtc_move = function (block) {
 Blockly.Arduino.tubitv2dtc_move_line = function (block) {
     Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
     if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
 
@@ -249,7 +249,7 @@ Blockly.Arduino.tubitv2dtc_move_line = function (block) {
     Blockly.Arduino.tubitv2dtc_interrset = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const vn = Blockly.Arduino.valueToCode(block, 'INTTNAME', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1);
@@ -259,7 +259,7 @@ Blockly.Arduino.tubitv2dtc_move_line = function (block) {
     Blockly.Arduino.tubitv2dtc_interrevent = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const vn = Blockly.Arduino.valueToCode(block, 'INTTNAME', Blockly.Arduino.ORDER_ATOMIC).slice(1, -1);
@@ -276,7 +276,7 @@ Blockly.Arduino.tubitv2dtc_move_line = function (block) {
     Blockly.Arduino.tubitv2dtc_return = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const boolCode = Blockly.Arduino.valueToCode(block, 'B', Blockly.Arduino.ORDER_ATOMIC);
@@ -286,7 +286,7 @@ Blockly.Arduino.tubitv2dtc_move_line = function (block) {
     Blockly.Arduino.tubitv2dtc_bnoturnpid = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const p = Blockly.Arduino.valueToCode(block, 'P', Blockly.Arduino.ORDER_ATOMIC); 
@@ -297,7 +297,7 @@ Blockly.Arduino.tubitv2dtc_move_line = function (block) {
         Blockly.Arduino.tubitv2dtc_bnoturn = function (block) {
         Blockly.Arduino.includes_.tubitv2dtc = `#include <TuDTC.h>`;
         if (!Blockly.Arduino.definitions_['tubitv2_set'].includes('TuDTC dtc(tubit);')) {
-  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);\n';
+  Blockly.Arduino.definitions_.tubitv2_set += '\nTuDTC dtc(tubit);';
 }
 
         const deg = Blockly.Arduino.valueToCode(block, 'DEG', Blockly.Arduino.ORDER_ATOMIC); 
