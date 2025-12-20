@@ -6,7 +6,7 @@ const tubitv2dtc = formatMessage => ({
     }),
     extensionId: 'tubitv2dtc',
 
-    version: '1.0.1',
+    version: '1.0.2',
     supportDevice: ['arduinoEsp32'],
     author: 'HUNG TU 鴻兔科技',
     iconURL: `assets/dtcv1.png`,

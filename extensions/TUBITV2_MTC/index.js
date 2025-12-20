@@ -6,7 +6,7 @@ const tubitv2mtc = formatMessage => ({
     }),
     extensionId: 'tubitv2mtc',
 
-    version: '2.4.0',
+    version: '2.4.1',
     supportDevice: ['arduinoEsp32'],
     author: 'HUNG TU 鴻兔科技',
     iconURL: `assets/mtcv2.png`,
