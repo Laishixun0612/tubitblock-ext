@@ -40,7 +40,8 @@ private:
 	static send_callback_t user_send_cb;
 
 	static void send_cb(const uint8_t *mac_addr, esp_now_send_status_t status);
-	static void recv_cb(const uint8_t *mac_addr, const uint8_t *data, int len);
+	// 修改第一個參數為 esp_now_recv_info_t 指標
+	static void recv_cb(const esp_now_recv_info_t *info, const uint8_t *data, int len);
 	void str_to_mac(const String &input_mac);
 	String mac_to_str(const uint8_t *mac);
 };

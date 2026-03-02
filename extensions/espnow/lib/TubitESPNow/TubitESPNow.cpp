@@ -116,8 +116,9 @@ void TubitESPNow::send_cb(const uint8_t *mac_addr, esp_now_send_status_t status)
 }
 
 /* Internal receive callback (calls user-defined if attached) */
-void TubitESPNow::recv_cb(const uint8_t* mac_addr, const uint8_t* data, int len) {
-
+void TubitESPNow::recv_cb(const esp_now_recv_info_t *info, const uint8_t *data, int len) {
+	const uint8_t *mac_addr = info->src_addr;
+	
 	if (len >= sizeof(packet_t)) {
         packet_t *packet = (packet_t *)data;
         recv_data_buffer = String(packet->message);

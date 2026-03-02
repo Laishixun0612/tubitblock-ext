@@ -6,7 +6,7 @@ const tubitv2_espnow = formatMessage => ({
     }),
     extensionId: 'tubitv2_espnow',
 
-    version: '1.5.0',
+    version: '1.6.0',
     supportDevice: [ 'arduinoEsp32'],
     
     author: 'HONG TU 鴻兔科技',
@@ -25,7 +25,7 @@ const tubitv2_espnow = formatMessage => ({
     library: 'lib',
     official: true,
     tags: ['communication'],
-    helpLink: 'https://www.trgreat.com'
+    helpLink: 'https://docs.espressif.com/projects/esp-idf/zh_CN/stable/esp32/api-reference/network/esp_now.html'
 });
 
 module.exports = tubitv2_espnow;
