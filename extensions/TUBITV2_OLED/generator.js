@@ -5,7 +5,8 @@ function registerGenerators (Blockly) {
     let oled_matrix_counter = 0;
 
     Blockly.Arduino.tubitv2_oled_start = function (block) {
-        Blockly.Arduino.includes_.tubitv2o = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
+        // 使用獨立 Key 避免覆蓋其他擴充庫
+        Blockly.Arduino.includes_.tubitv2_base = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
         Blockly.Arduino.definitions_.tubitv2o= `Adafruit_SH1106G display(128, 64, &Wire);\n`;
         Blockly.Arduino.setups_['TUBITV2_OLED'] = `display.begin(0x3C, true);`;
         var branch = Blockly.Arduino.statementToCode(block, 'SUBSTACK');
@@ -17,14 +18,14 @@ function registerGenerators (Blockly) {
     };
 
     Blockly.Arduino.tubitv2_oled_update = function (block) {
-        Blockly.Arduino.includes_.tubitv2o = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
+        Blockly.Arduino.includes_.tubitv2_base = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
         Blockly.Arduino.definitions_.tubitv2o= `Adafruit_SH1106G display(128, 64, &Wire);\n`;
         Blockly.Arduino.setups_['TUBITV2_OLED'] = `display.begin(0x3C, true);\ndisplay.setRotation(0);\ndisplay.clearDisplay();`;
         return "display.display();\n";
     };
 
     Blockly.Arduino.tubitv2_oled_clear = function (block) {
-        Blockly.Arduino.includes_.tubitv2o = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
+        Blockly.Arduino.includes_.tubitv2_base = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
         Blockly.Arduino.definitions_.tubitv2o= `Adafruit_SH1106G display(128, 64, &Wire);\n`;
         Blockly.Arduino.setups_['TUBITV2_OLED'] = `display.begin(0x3C, true);\ndisplay.setRotation(0);\ndisplay.clearDisplay();`;
         return "display.clearDisplay();\n";
@@ -180,7 +181,7 @@ function registerGenerators (Blockly) {
     //chart...
 
     Blockly.Arduino.tubitv2_oled_draw_chart = function (block) {
-        Blockly.Arduino.includes_.tubitv2o = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
+        Blockly.Arduino.includes_.tubitv2_base = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
         Blockly.Arduino.definitions_.tubitv2o= `Adafruit_SH1106G display(128, 64, &Wire);\n`;
         Blockly.Arduino.setups_['TUBITV2_OLED'] = `display.begin(0x3C, true);`;
         Blockly.Arduino.includes_['TUBITV2_OLED_CHART']= `#include <chart_display.h>`;
@@ -201,9 +202,9 @@ function registerGenerators (Blockly) {
             rows.push(`0b${matrix_data.slice(i * 14, (i + 1) * 14)}00`);
         }
         
-        Blockly.Arduino.includes_.tubitv2o = `#include <Adafruit_GFX.h>`;
-        Blockly.Arduino.includes_.tubitv2o += `\n#include <Adafruit_SH110X.h>`;
-        Blockly.Arduino.includes_.tubitv2o += `\n#include <dot_matrix.h>`;
+        // 修正處：拆分 Key，避免基礎庫覆寫點陣圖庫
+        Blockly.Arduino.includes_.tubitv2_base = `#include <Adafruit_GFX.h>\n#include <Adafruit_SH110X.h>`;
+        Blockly.Arduino.includes_.tubitv2_dotmatrix = `#include <dot_matrix.h>`;
         
         if(!Blockly.Arduino.definitions_.tubitv2o){
             Blockly.Arduino.definitions_.tubitv2o = `Adafruit_SH1106G display(128, 64, &Wire, -1);\n`;
