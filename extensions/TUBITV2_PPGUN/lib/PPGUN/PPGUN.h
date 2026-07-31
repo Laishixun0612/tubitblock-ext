@@ -1,3 +1,4 @@
+//PPGUN V.2(u2026.7.11)
 #ifndef PPGUN_H
 #define PPGUN_H
 
@@ -36,6 +37,10 @@ inline void PPGUN_launch() {
   tubit.setServoAngle(launchPin, 0);
   delay(2000);
   tubit.setServoAngle(launchPin, launchDeg);
+}
+
+inline void PPGUN_changeToCRing() {//更換C型環
+  tubit.setServoAngle(launchPin, 150);
 }
 
 // ------------------- 累加角度控制 -------------------

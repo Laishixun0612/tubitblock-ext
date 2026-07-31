@@ -71,6 +71,17 @@ function registerBlocks (Blockly) {
             });
         }
     };
+
+    Blockly.Blocks.tubitv2ppgun_changetocring = {
+        init: function () {
+            this.jsonInit({
+                message0: Blockly.Msg.TUBITV2PPGUN_CHANGETOCRING,
+                colour: colour,
+                secondaryColour: secondaryColour,
+                extensions: ['shape_statement']
+            });
+        }
+    };
     
     Blockly.Blocks.tubitv2ppgun_trcontroladd = {
         init: function () {

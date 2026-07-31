@@ -10,6 +10,7 @@
             "TUBITV2SM_6": "S6",
             "TUBITV2SM_7": "S7",
             "TUBITV2PPGUN_LAUNCH": "Launch Ping Pong Ball",
+            "TUBITV2PPGUN_CHANGETOCRING": "Change to C-ring launcher",
             "TUBITV2PPGUN_TRCONTROLADD": "Rotate pan by %1 degrees",
             "TUBITV2PPGUN_UDCONTROLADD": "Tilt up/down by %1 degrees",
             "TUBITV2PPGUN_TRCONTROL": "Rotate pan to %1 degrees,%2s",

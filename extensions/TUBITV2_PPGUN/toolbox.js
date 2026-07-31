@@ -11,6 +11,9 @@ function registerToolboxs () {
     <block type="tubitv2ppgun_launch" id="tubitv2ppgun_launch">
     </block>    
 
+    <block type="tubitv2ppgun_changetocring" id="tubitv2ppgun_changetocring">
+    </block>
+
     
     <sep gap="36"/>
     <label text="%{BKY_PPGUN_DEGADD}" />

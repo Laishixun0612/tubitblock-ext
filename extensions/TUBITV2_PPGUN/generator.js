@@ -15,6 +15,11 @@ function registerGenerators (Blockly) {
         return `PPGUN_launch();\n`;
     };
 
+    Blockly.Arduino.tubitv2ppgun_changetocring = function (block) {
+        Blockly.Arduino.includes_.tubitv2ppgun_init_set = `#include <PPGUN.h>`;
+        return `PPGUN_changeToCRing();\n`;
+    };
+
     Blockly.Arduino.tubitv2ppgun_trcontroladd= function (block) {
         const deg = Blockly.Arduino.valueToCode(block, 'DEG', Blockly.Arduino.ORDER_ATOMIC);
         return`PPGUN_PanAdd(${deg});\n`;
