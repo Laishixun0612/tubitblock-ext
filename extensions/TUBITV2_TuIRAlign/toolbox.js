@@ -53,10 +53,177 @@ function registerToolboxs () {
     </block>
 
     <sep gap="36"/>
-    <label text="%{BKY_TUBITV2TUIRALIGN_RUN}" />
+    <label text="%{BKY_TUBITV2TUIRALIGN_PARAMETERS}" />
+
+    <block type="tubitv2tuiralign_settolerance" id="tubitv2tuiralign_settolerance">
+        <value name="PERCENT">
+            <shadow type="math_number">
+                <field name="NUM">5.0</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="tubitv2tuiralign_setdeadbands" id="tubitv2tuiralign_setdeadbands">
+        <value name="DISTANCE">
+            <shadow type="math_number">
+                <field name="NUM">0.3</field>
+            </shadow>
+        </value>
+        <value name="ANGLE">
+            <shadow type="math_number">
+                <field name="NUM">0.3</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="tubitv2tuiralign_setoutputlimits" id="tubitv2tuiralign_setoutputlimits">
+        <value name="VX">
+            <shadow type="math_number">
+                <field name="NUM">20</field>
+            </shadow>
+        </value>
+        <value name="VY">
+            <shadow type="math_number">
+                <field name="NUM">20</field>
+            </shadow>
+        </value>
+        <value name="WZ">
+            <shadow type="math_number">
+                <field name="NUM">360</field>
+            </shadow>
+        </value>
+        <value name="WZ_SCALE">
+            <shadow type="math_number">
+                <field name="NUM">2.5</field>
+            </shadow>
+        </value>
+    </block>
+
+    <sep gap="36"/>
+    <label text="%{BKY_TUBITV2TUIRALIGN_PID}" />
+
+    <block type="tubitv2tuiralign_setpidaxis" id="tubitv2tuiralign_setpidaxis">
+        <field name="AXIS">Y</field>
+        <value name="P">
+            <shadow type="math_number">
+                <field name="NUM">3.0</field>
+            </shadow>
+        </value>
+        <value name="I">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="D">
+            <shadow type="math_number">
+                <field name="NUM">0.004</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="tubitv2tuiralign_setpidxz" id="tubitv2tuiralign_setpidxz">
+        <value name="X_P">
+            <shadow type="math_number">
+                <field name="NUM">5.0</field>
+            </shadow>
+        </value>
+        <value name="X_I">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="X_D">
+            <shadow type="math_number">
+                <field name="NUM">0.035</field>
+            </shadow>
+        </value>
+        <value name="Z_P">
+            <shadow type="math_number">
+                <field name="NUM">38</field>
+            </shadow>
+        </value>
+        <value name="Z_I">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="Z_D">
+            <shadow type="math_number">
+                <field name="NUM">0.04</field>
+            </shadow>
+        </value>
+    </block>
+
+    <block type="tubitv2tuiralign_setpidall" id="tubitv2tuiralign_setpidall">
+        <value name="Y_P">
+            <shadow type="math_number">
+                <field name="NUM">3.0</field>
+            </shadow>
+        </value>
+        <value name="Y_I">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="Y_D">
+            <shadow type="math_number">
+                <field name="NUM">0.004</field>
+            </shadow>
+        </value>
+        <value name="X_P">
+            <shadow type="math_number">
+                <field name="NUM">5.0</field>
+            </shadow>
+        </value>
+        <value name="X_I">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="X_D">
+            <shadow type="math_number">
+                <field name="NUM">0.035</field>
+            </shadow>
+        </value>
+        <value name="Z_P">
+            <shadow type="math_number">
+                <field name="NUM">38</field>
+            </shadow>
+        </value>
+        <value name="Z_I">
+            <shadow type="math_number">
+                <field name="NUM">0</field>
+            </shadow>
+        </value>
+        <value name="Z_D">
+            <shadow type="math_number">
+                <field name="NUM">0.04</field>
+            </shadow>
+        </value>
+    </block>
+
+    <sep gap="36"/>
+<label text="%{BKY_TUBITV2TUIRALIGN_MAIN_RUN}" />
+
 
     <block type="tubitv2tuiralign_align" id="tubitv2tuiralign_align">
     </block>
+
+    <block type="tubitv2tuiralign_align_timeout" id="tubitv2tuiralign_align_timeout">
+        <value name="TIMEOUT">
+            <shadow type="math_number">
+                <field name="NUM">8</field>
+            </shadow>
+        </value>
+        <value name="CONFIRM">
+            <shadow type="math_number">
+                <field name="NUM">1</field>
+            </shadow>
+        </value>
+    </block>
+
+<sep gap="36"/>
+    <label text="%{BKY_TUBITV2TUIRALIGN_RUN}" />
 
     <block type="tubitv2tuiralign_readir" id="tubitv2tuiralign_readir">
     </block>

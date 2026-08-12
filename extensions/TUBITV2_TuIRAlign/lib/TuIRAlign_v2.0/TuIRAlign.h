@@ -56,18 +56,28 @@ public:
   // 調整距離與角度 deadband
   void setDeadbands(double distDb, double angDb);
 
+  // 調整相對容許範圍；5 表示目標值的 ±5%，0 可關閉
+  void setTolerancePercent(double percent);
+
   // 調整輸出上限與角度比例
   void setOutputLimits(double vxLim, double vyLim, double wzLim, double wzScale);
 
-  // 外部微調 PID 參數
+  // 外部微調 PID 參數，參數順序皆為 Kp, Ki, Kd
   void setPidY(double kp, double ki, double kd);
   void setPidX(double kp, double ki, double kd);
-  void setPidT(double kp, double ki, double kd);
+  void setPidZ(double kp, double ki, double kd);
+  void setPidT(double kp, double ki, double kd); // 舊版相容：等同 setPidZ()
+  void setPidXZ(double x_kp, double x_ki, double x_kd,
+                double z_kp, double z_ki, double z_kd);
+  void setXPID(double kp, double ki, double kd);
+  void setZPID(double kp, double ki, double kd);
+  void setXZPID(double x_kp, double x_ki, double x_kd,
+                double z_kp, double z_ki, double z_kd);
 
-  // 一次設定三組 PID 參數（Y, X, T）
+  // 一次設定三組 PID 參數（Y, X, Z）
   void setPidAll(double y_kp, double y_ki, double y_kd,
                  double x_kp, double x_ki, double x_kd,
-                 double t_kp, double t_ki, double t_kd);
+                 double z_kp, double z_ki, double z_kd);
 
   // 單步校正（非阻塞），回傳 true 表示已對齊完成
   bool step(IRDir mainDir, IRDir secDir);
@@ -98,11 +108,22 @@ private:
   bool   use_ratio_angle_ = false;
   double deadband_dist_   = 0.3;
   double deadband_ang_    = 0.3;
+  double tolerance_ratio_ = 0.05;
 
   double vx_limit_ = 20;
   double vy_limit_ = 20;
   double wz_limit_ = 360;
   double wz_scale_ = 2.5;
+
+  enum SideAlignPhase {
+    SIDE_PHASE_APPROACH,
+    SIDE_PHASE_ROTATE
+  };
+
+  bool has_active_request_ = false;
+  IRDir active_main_dir_ = IR_NONE;
+  IRDir active_sec_dir_ = IR_NONE;
+  SideAlignPhase side_phase_ = SIDE_PHASE_APPROACH;
 
   // 濾波後 IR 值
   double fLU_, fLB_, fRU_, fRB_, fUP_, fBK_;
@@ -119,6 +140,9 @@ private:
   // === 內部工具 ===
   double readIR_(int pin);
   bool   reached_(double in, double sp, double db) const;
+  bool   sideDistanceReached_(IRDir dir) const;
+  void   selectSideDistanceTarget_(IRDir dir, double& in, double& sp) const;
+  void   resetState_();
   double ema_(double prev, double now, double alpha);
 };
 
